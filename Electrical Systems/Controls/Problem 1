@@ -1,0 +1,64 @@
+
+#include <stdio.h>
+
+int main()
+{
+    int L1=0;
+    int input;
+    int L2=0;
+    int A;
+    int battery_percent;
+    scanf("%d",&input);
+    while (input==1)
+    {
+        if (L1==0)
+            {
+                printf("L1 ON\n");
+                L1+=1;
+            }
+            break;
+        if (L1==1)
+            {
+                printf("L1 OFF");
+                L1-=1;
+            }
+            break;
+    }
+    scanf("%d",&input);
+    while (input==2)
+    {
+        if (L2==0)
+            {
+                printf("L2 ON\n");
+                L2+=1;
+            }
+            break;
+        if (L2==1)
+            {
+                printf("L2 OFF\n");
+                L2-=1;
+            }
+            break;
+    }
+    scanf("%d",&A);
+    switch (A){
+        case 3:
+        printf("AC LOW MODE\n");
+        break;
+        case 4:
+        printf("INPUT BATTERY PERCENTAGE\n");
+        scanf ("%d" ,&battery_percent);
+        battery_percent < 40? printf("BATTERY CONSTRAINT") : printf("AC MEDIUM MODE");  
+        break;
+        case 5:
+        printf("INPUT BATTERY PERCENTAGE\n");
+        scanf ("%d" ,&battery_percent);
+        battery_percent < 60? printf("BATTERY CONSTRAINT") : printf("AC HIGH MODE");
+        break;
+        
+    }
+    
+
+
+    return 0;
+}
